@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-data-modification",
+  "version": "1.0.0",
+  "description": "data modification",
+  "main": "dataModif.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "dataModif": "dataModif.js"
+    }
+}
+}

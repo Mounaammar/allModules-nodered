@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('pairedTTest',{
+        category: 'Evaluate Model',
+        subCategory: '',
+        color: 'white',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:3,
+        icon: "font-awesome/fa-database",
+        label: function() {
+            return this.name||"5x2CV paired t-test";
+           
+        },
+        inputLabels: "parameter for input",
+        //outputLabels: ["stdout","stderr","rc"],
+        outputLabels: function(index) {
+            return "my port number "+index;
+        },
+        paletteLabel: "5x2CV paired t-test"
+   
+
+  
+  });
+</script>
+
+<script type="text/html" data-template-name="5x2CV paired t-test">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="5x2CV paired t-test">
+    <p>5x2CV paired t-test</p>
+</script>

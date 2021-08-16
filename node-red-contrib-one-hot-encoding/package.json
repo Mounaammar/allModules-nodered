@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-one-hot-encoding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "oneHotEncoding.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "oneHotEncoding": "oneHotEncoding.js"
+    }
+}
+}

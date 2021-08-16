@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-leave-one-group-out-cross-validation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "leaveOneGroupOut.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "leaveOneGroupOut": "leaveOneGroupOut.js"
+    }
+}
+}

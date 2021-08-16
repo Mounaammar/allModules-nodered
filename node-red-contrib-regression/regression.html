@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('regression',{
+        category: 'Machine Learning Algorithms',
+        subCategory: "hello2",
+        color: 'white',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:3,
+        icon: "font-awesome/fa-database",
+        label: function() {
+            return this.name||"Regression (Linear+Multiple+Polynomial)";
+           
+        },
+        inputLabels: "parameter for input",
+        //outputLabels: ["stdout","stderr","rc"],
+        outputLabels: function(index) {
+            return "my port number "+index;
+        },
+        paletteLabel: "Regression (Linear+Multiple+Polynomial)"
+
+   
+
+  
+  });
+</script>
+
+<script type="text/html" data-template-name="Regression(Linear+Multiple+Polynomial)">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="Regression(Linear+Multiple+Polynomial)">
+    <p>Regression (Linear+Multiple+Polynomial)</p>
+</script>

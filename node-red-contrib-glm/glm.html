@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('GLM',{
+        category: 'Machine Learning Algorithms',
+        subCategory: "",
+        color: 'white',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:3,
+        icon: "font-awesome/fa-database",
+        label: function() {
+            return this.name||"GLM";
+           
+        },
+        inputLabels: "parameter for input",
+        //outputLabels: ["stdout","stderr","rc"],
+        outputLabels: function(index) {
+            return "my port number "+index;
+        },
+        paletteLabel: "GLM"
+   
+
+  
+  });
+</script>
+
+<script type="text/html" data-template-name="GLM">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="GLM">
+    <p>GLM</p>
+</script>

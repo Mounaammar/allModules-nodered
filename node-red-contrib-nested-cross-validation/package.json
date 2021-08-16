@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-nested-cross-validation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nestedCrossValdiation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "nestedCrossValdiation": "nestedCrossValdiation.js"
+    }
+}
+}

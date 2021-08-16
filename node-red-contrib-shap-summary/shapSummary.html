@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('shapSummary',{
+        category: 'XAI',
+        subCategory: '',
+        color: 'white',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:3,
+        icon: "font-awesome/fa-database",
+        label: function() {
+            return this.name||"SHAP Summary";
+           
+        },
+        inputLabels: "parameter for input",
+        //outputLabels: ["stdout","stderr","rc"],
+        outputLabels: function(index) {
+            return "my port number "+index;
+        },
+        paletteLabel: "SHAP Summary"
+
+   
+
+  
+  });
+</script>
+
+<script type="text/html" data-template-name="SHAP Summary">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="SHAP Summary">
+    <p>SHAP Summary</p>
+</script>

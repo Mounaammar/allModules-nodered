@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-knn-for-classification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "knnClassification.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "knnClassification": "knnClassification.js"
+    }
+}
+}

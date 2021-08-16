@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('partialDependence',{
+        category: 'XAI',
+        subCategory: '',
+        color: 'white',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:3,
+        icon: "font-awesome/fa-database",
+        label: function() {
+            return this.name||"Partial Dependence (PD) Plots ";
+           
+        },
+        inputLabels: "parameter for input",
+        //outputLabels: ["stdout","stderr","rc"],
+        outputLabels: function(index) {
+            return "my port number "+index;
+        },
+        paletteLabel: "Partial Dependence (PD) Plots "
+
+   
+
+  
+  });
+</script>
+
+<script type="text/html" data-template-name="Partial Dependence (PD) Plots ">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="Partial Dependence (PD) Plots ">
+    <p>Partial Dependence (PD) Plots </p>
+</script>

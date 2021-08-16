@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('roc',{
+        category: 'Evaluate Model',
+        subCategory: '',
+        color: 'white',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:3,
+        icon: "font-awesome/fa-database",
+        label: function() {
+            return this.name||"Nested Cross-Validation";
+           
+        },
+        inputLabels: "parameter for input",
+        //outputLabels: ["stdout","stderr","rc"],
+        outputLabels: function(index) {
+            return "my port number "+index;
+        },
+        paletteLabel: "Nested Cross-Validation"
+   
+
+  
+  });
+</script>
+
+<script type="text/html" data-template-name="Nested Cross-Validation">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="Nested Cross-Validation">
+    <p>Nested Cross-Validation</p>
+</script>

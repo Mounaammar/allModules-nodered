@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-parsing",
+  "version": "1.0.0",
+  "description": "parsing",
+  "main": "parsing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "parsing": "parsing.js"
+    }
+}
+}

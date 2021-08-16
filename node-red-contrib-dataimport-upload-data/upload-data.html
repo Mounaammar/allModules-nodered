@@ -1,0 +1,94 @@
+
+
+<script type="text/html" data-template-name="upload-data">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i>Nom</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        
+    </div>
+    <div class="form-row">
+        <label for="node-input-fileUpload"><i class="fa fa-tag"></i> Select the data to upload
+        </label>
+        <input type="file" id="node-input-fileUpload">
+        <!-- <input id="myFile" type="file" name="fileToParse">
+        <input id="file-submit" type="submit" value="Import data from file" name="submit"> -->
+    </div>
+
+ 
+
+    <div class="form-row">
+        <label for="node-input-nameData"><i class="fa fa-tag"></i> Enter a name for the new dataset
+        </label>
+        <input type="text" id="node-input-nameData"   >
+    </div>
+    <div class="form-row" hidden>
+        <label for="node-input-typeFile"> New Property</label>
+        <input type="text" id="node-input-typeFile">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="upload-data">
+    <p>Upload Data</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('upload-data',{
+        category: 'Data Import',
+        subCategory: '',
+        color: 'white',
+        defaults: {
+            nameData: {value : ''},
+            name: {value :''},
+            typeFile:{value :''}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-database",
+        label: function() {
+            return this.name||"Upload Data";
+           
+        },
+        inputLabels: "parameter for input",
+        //outputLabels: ["stdout","stderr","rc"],
+        // outputLabels: function(index) {
+        //     return "my port number "+index;
+        // },
+        paletteLabel: "Upload Data",
+        oneditsave: function() {
+          
+          typeFile = document.getElementById('node-input-fileUpload').files[0].type;
+            console.log(typeFile)
+            this.name=document.getElementById('node-input-fileUpload').files[0].name;
+            console.log("name"+this.name)
+            // var parent_idFile = document.getElementById('node-input-file').files[0].parent_id;
+            // var path=window.document.getElementById("node-input-file").value;
+            // $('#file-submit').click(function (e) {
+            //     var fd = new FormData();
+            //     fd.append('file', $('#myFile')[0].files[0]);
+            //     var file = fd.get('file');
+            //     var blb = file.slice();
+            //     var reader = new FileReader();
+            //     // This fires after the blob has been read/loaded.
+            //     reader.addEventListener('loadend', (e) => {
+            //         var fileData = e.srcElement.result;
+            //         console.log(fileData);
+            //         $.ajax({
+            //             url: 'D:/stage_Hydatis',
+            //             data: {fileData: fileData},
+            //             method: 'POST',
+            //             success: function (data) {
+            //                 populateForm(data);
+            //             }
+            //         });
+            //     });
+            //     // Start reading the blob as text.
+            //     reader.readAsBinaryString(blb);
+            // });
+        },
+       
+
+   
+
+  
+  });
+</script>

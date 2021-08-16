@@ -1,0 +1,12 @@
+import { IWorkflowBase, IWorkflowExecuteProcess, IWorkflowExecutionDataProcess } from './';
+import { IExecuteWorkflowInfo, INodeExecutionData, INodeParameters, IWorkflowCredentials, IWorkflowExecuteAdditionalData, IWorkflowExecuteHooks, IWorkflowHooksOptionalParameters, WorkflowExecuteMode, WorkflowHooks } from 'n8n-workflow';
+export declare function hookFunctionsPreExecute(parentProcessMode?: string): IWorkflowExecuteHooks;
+export declare function getRunData(workflowData: IWorkflowBase, inputData?: INodeExecutionData[]): Promise<IWorkflowExecutionDataProcess>;
+export declare function getWorkflowData(workflowInfo: IExecuteWorkflowInfo): Promise<IWorkflowBase>;
+export declare function executeWorkflow(workflowInfo: IExecuteWorkflowInfo, additionalData: IWorkflowExecuteAdditionalData, inputData?: INodeExecutionData[], parentExecutionId?: string, loadedWorkflowData?: IWorkflowBase, loadedRunData?: IWorkflowExecutionDataProcess): Promise<Array<INodeExecutionData[] | null> | IWorkflowExecuteProcess>;
+export declare function sendMessageToUI(source: string, message: any): void;
+export declare function getBase(credentials: IWorkflowCredentials, currentNodeParameters?: INodeParameters, executionTimeoutTimestamp?: number): Promise<IWorkflowExecuteAdditionalData>;
+export declare function getWorkflowHooksIntegrated(mode: WorkflowExecuteMode, executionId: string, workflowData: IWorkflowBase, optionalParameters?: IWorkflowHooksOptionalParameters): WorkflowHooks;
+export declare function getWorkflowHooksWorkerExecuter(mode: WorkflowExecuteMode, executionId: string, workflowData: IWorkflowBase, optionalParameters?: IWorkflowHooksOptionalParameters): WorkflowHooks;
+export declare function getWorkflowHooksWorkerMain(mode: WorkflowExecuteMode, executionId: string, workflowData: IWorkflowBase, optionalParameters?: IWorkflowHooksOptionalParameters): WorkflowHooks;
+export declare function getWorkflowHooksMain(data: IWorkflowExecutionDataProcess, executionId: string, isMainProcess?: boolean): WorkflowHooks;

@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('decisionTreeClassifier',{
+        category: 'Machine Learning Algorithms',
+        subCategory: "Score",
+        color: 'white',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:3,
+        icon: "font-awesome/fa-database",
+        label: function() {
+            return this.name||"Decision Tree Classifier";
+           
+        },
+        inputLabels: "parameter for input",
+        //outputLabels: ["stdout","stderr","rc"],
+        outputLabels: function(index) {
+            return "my port number "+index;
+        },
+        paletteLabel: "Decision Tree Classifier"
+   
+
+  
+  });
+</script>
+
+<script type="text/html" data-template-name="decisionTreeClassifier">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="Decision Tree Classifier">
+    <p>Decision Tree Classifier</p>
+</script>

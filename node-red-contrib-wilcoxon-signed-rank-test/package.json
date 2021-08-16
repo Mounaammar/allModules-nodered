@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-wilcoxon-signed-rank-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wilcoxon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "wilcoxon": "wilcoxon.js"
+    }
+}
+}

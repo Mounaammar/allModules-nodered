@@ -1,0 +1,28 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhookModel1589476000887 = void 0;
+const config = require("../../../../config");
+class WebhookModel1589476000887 {
+    constructor() {
+        this.name = 'WebhookModel1589476000887';
+    }
+    async up(queryRunner) {
+        let tablePrefix = config.get('database.tablePrefix');
+        const tablePrefixIndex = tablePrefix;
+        const schema = config.get('database.postgresdb.schema');
+        if (schema) {
+            tablePrefix = schema + '.' + tablePrefix;
+        }
+        await queryRunner.query(`CREATE TABLE IF NOT EXISTS ${tablePrefix}webhook_entity ("workflowId" integer NOT NULL, "webhookPath" character varying NOT NULL, "method" character varying NOT NULL, "node" character varying NOT NULL, CONSTRAINT "PK_${tablePrefixIndex}b21ace2e13596ccd87dc9bf4ea6" PRIMARY KEY ("webhookPath", "method"))`, undefined);
+    }
+    async down(queryRunner) {
+        let tablePrefix = config.get('database.tablePrefix');
+        const schema = config.get('database.postgresdb.schema');
+        if (schema) {
+            tablePrefix = schema + '.' + tablePrefix;
+        }
+        await queryRunner.query(`DROP TABLE ${tablePrefix}webhook_entity`, undefined);
+    }
+}
+exports.WebhookModel1589476000887 = WebhookModel1589476000887;
+//# sourceMappingURL=1589476000887-WebhookModel.js.map
